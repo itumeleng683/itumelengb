@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: lightblue;
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  background: #2c3e50;
+  padding: 1rem;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+
+  text-align: center;
+  background: url('images/hero.jpg') repeat; /* repeat the image */
+  background-size: 200px 200px; /* 👈 controls square size */
+  color: white;
+
+  height: 100vh; /* full screen */
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Section Styling */
+section {
+  padding: 40px 20px;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form input, form textarea, form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form input:focus, form textarea:focus {
+  border-color: #f39c12;
+  outline: none;
+}
+form button {
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #f39c12;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+/* Force same size for grid images */
+.grid img {
+  width: 100%;
+  height: 250px;   /* 👈 choose a fixed height */
+  object-fit: cover;  /* 👈 crops edges but keeps image sharp */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
